@@ -22,12 +22,15 @@ output_file = "generated"
 # Network definition
 model = Sequential()
 
+# First LSTM Layer
 model.add(LSTM(return_sequences=True, output_dim=96, input_shape=(n_timesteps, n_input)))
 model.add(Dropout(0.2))
 
+# Second LSTM Layer
 model.add(LSTM(return_sequences=False, output_dim=96))
 model.add(Dropout(0.2))
 
+# Densifying output to layer of size n_input
 model.add(Dense(n_input,  init='uniform'))
 
 model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
