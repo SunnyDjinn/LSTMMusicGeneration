@@ -15,7 +15,7 @@ getKeepActivated = False						# Type of input matrice
 
 training_mode = False							# Training or generating mode
 
-savingFileName = "./weights.2139-1.26.hdf5"		# Saved network loading file
+savingFileName = "./weights.2139-1.26.hdf5"		# Saved network loading file - this one contains the training results for a reduced dataset 
 output_file = "generated"
 
 
